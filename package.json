@@ -1,0 +1,15 @@
+{
+  "name": "stablecoin-payment-network-mvp",
+  "version": "1.0.0",
+  "description": "MVP for a stablecoin payment network",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "ethers": "^6.11.1",
+    "express": "^4.18.2"
+  }
+}
