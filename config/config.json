@@ -1,9 +1,9 @@
 {
   "networks": [
     {
-      "name": "ETH_Goerli",
-      "rpcURL": "https://rpc.ankr.com/eth_goerli",
-      "gasApi": "https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=YOUR_ETHERSCAN_API_KEY",
+      "name": "ETH_Sepolia",
+      "rpcURL": "https://rpc.sepolia.org",
+       "gasApi": "https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=YOUR_ETHERSCAN_API_KEY",
       "gasPrice": 0,
       "supportedTokens": ["USDT", "USDC"]
     },
@@ -18,7 +18,7 @@
   "poolingThreshold": 5,
   "feePercentage": 0.01,
    "privateKeys": {
-       "ETH_Goerli" : "YOUR_ETH_GOERLI_PRIVATE_KEY",
+       "ETH_Sepolia" : "YOUR_ETH_SEPOLIA_PRIVATE_KEY",
         "BSC_Testnet": "YOUR_BSC_TESTNET_PRIVATE_KEY"
    }
 }
