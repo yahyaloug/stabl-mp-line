@@ -6,12 +6,12 @@ async function testSendTransaction(){
     "toAddress" : "YOUR_TEST_TO_WALLET",
     "stablecoin" : "USDT",
         "value" : 0.001,
-        "fromNetwork" : "ETH_Goerli",
+        "fromNetwork" : "ETH_Sepolia",
         "toNetwork": "BSC_Testnet"
     }
 
       try {
-          const response =  await axios.post('http://localhost:3000/api/transactions/send', transactionData)
+          const response =  await axios.post('http://localhost:8080/api/transactions/send', transactionData)
           console.log("Send transaction: ", response.data)
       }catch(error){
           console.error("Error testing transaction", error)
@@ -21,7 +21,7 @@ async function testSendTransaction(){
 
 async function testProcessTransactions(networkName){
   try{
-       const response = await axios.post('http://localhost:3000/api/transactions/process-transactions', {networkName: networkName})
+       const response = await axios.post('http://localhost:8080/api/transactions/process-transactions', {networkName: networkName})
           console.log(`Process transaction in ${networkName}`, response.data)
       } catch (error){
           console.error("Error process transactions: ", error)
@@ -35,7 +35,7 @@ async function executeTests(){
         await testSendTransaction();
    }
 //call the function that triggers the pooling and forwards the transactions to the network, for each of the networks defined in our `config.json` file.
-  await  testProcessTransactions("ETH_Goerli")
+  await  testProcessTransactions("ETH_Sepolia")
    await  testProcessTransactions("BSC_Testnet")
 }
 executeTests()
